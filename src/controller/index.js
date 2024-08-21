@@ -1,0 +1,8 @@
+module.exports.CategoryController=require('./categories.controller')
+module.exports.SubcategoryController=require('./subcategories.controller')
+module.exports.ProductController=require("./products.controller")
+module.exports.VariantController=require("./variants.controller")
+module.exports.SalsepeopleController=require("./salsepepole.controller")
+module.exports.UsersController=require("./users.controller")
+module.exports.sendemailcontroller=require("./sendemail.cotroller")
+module.exports.orderController=require("./orders.controller")
