@@ -5,7 +5,7 @@ const routs = require("./routes/api/v1/index")
 const connectDB = require("./db/mongoosedb")
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
-
+const path=require("path")
 const passport = require("passport")
 const {Googlelogin,facebooklogin}=require("./utils/provider")
 // const connectchat = require("./utils/soketIO")
