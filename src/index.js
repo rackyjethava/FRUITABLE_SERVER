@@ -14,7 +14,7 @@ const swaggerUi = require('swagger-ui-express');
 // const swaggerDocument = YAML.load('./src/api.yaml');
 
 
-app.use(cookieParser())
+
 Googlelogin()
 facebooklogin()
 const _dirname = path.resolve();
@@ -51,7 +51,7 @@ app.use(require('express-session')
    }));
 app.use(passport.session());
 app.use(passport.initialize());
-
+app.use(cookieParser())
 app.use("/api/v1", routs)
 // app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
