@@ -38,7 +38,7 @@ app.use(
 
 connectDB()
 app.use(cors({
-   origin: "https://fruitable-client-iota.vercel.app/",
+   origin: "https://fruitable-client-iota.vercel.app",
    credentials: true,
 }))
 app.use(express.json())
