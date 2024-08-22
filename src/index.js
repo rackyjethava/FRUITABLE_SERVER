@@ -37,22 +37,10 @@ app.use(
 
 
 connectDB()
-const allowedOrigins = [
-   'https://fruitable-client-iota.vercel.app',
-   'https://fruitable-client-n8orv05ao-rakeshs-projects-cbf5c5c9.vercel.app'
-];
-
 app.use(cors({
-  origin: function (origin, callback) {
-      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-          callback(null, true);
-      } else {
-          callback(new Error('Not allowed by CORS'));
-      }
-  },
-  credentials: true,
-}));
-
+   origin: "https://fruitable-client-iota.vercel.app",
+   credentials: true,
+}))
 app.use(express.json())
 app.use(require('express-session')
    ({
