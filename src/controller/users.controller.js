@@ -147,14 +147,14 @@ const login = async (req, res) => {
         const refreshoption = {
             httpOnly: true,
             secure: true,
-            samSite:"None",
+            sameSite:"None",
             maxAge: 60 * 60 * 24 * 7
         }
 
         const Acesssoption = {
             httpOnly: true,
             secure: true,
-            samSite:"None",
+            sameSite:"None",
             maxAge: 60 * 60 * 1000
         }
 
@@ -255,14 +255,14 @@ const getRefreshToken = async (req, res) => {
         const refreshoption = {
             httpOnly: true,
             secure: true,
-            samSite:"None",
+            sameSite:"None",
             maxAge: 60 * 60 * 24 * 7
         }
 
         const Acesssoption = {
             httpOnly: true,
             secure: true,
-            samSite:"None",
+            sameSite: "None",
             maxAge: 60 * 60 * 1000
         }
         res.status(200).
