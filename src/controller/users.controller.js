@@ -86,11 +86,6 @@ const register = async (req, res) => {
 
         const userDataF = await Users.findById({ _id: userData._id }).select("-password")
 
-        // try {
-        //     await sendEmail(userDataF.email, "message sent")
-        // } catch (error) {
-        //     console.log(error, "not send");
-        // }
 
         if (!userDataF) {
             return res.status(500).json({
@@ -122,6 +117,8 @@ const login = async (req, res) => {
         const user = await Users.findOne({
             $or: [{ email }]
         })
+        console.log(user,"user data");
+        
 
         if (!user) {
             return res.status(404).json({
@@ -130,11 +127,11 @@ const login = async (req, res) => {
             })
         }
 
-        console.log(user);
+    
 
         const validaccestokan = await bcrypt.compare(password, user.password)
 
-        console.log(validaccestokan);
+        console.log(validaccestokan,"validation token");
 
         if (!validaccestokan) {
             return res.status(401).json({
